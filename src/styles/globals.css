@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply text-sm font-base;
+    }
+
+    img {
+        @apply inline-block;
+    }
+
+    p {
+        @apply mb-4 leading-6;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-medium leading-[1.4];
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+
+    h5 {
+        @apply text-lg;
+    }
+
+    /* li {
+        @apply last: mr-0;
+    } */
+
+    a {
+        @apply transition;
+    }
+}
+
+@layer components {
+    .py-section {
+        @apply py-[70px];
+    }
+
+    .pt-section {
+        @apply pt-[70px];
+    }
+
+    .pb-section {
+        @apply pb-[70px];
+    }
+}

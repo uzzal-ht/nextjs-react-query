@@ -24,7 +24,7 @@ const PostsWrapper = () => {
     }
 
     return (
-        <div className="posts-wrapper py-20">
+        <div className="posts-wrapper pb-20">
             <div className="container">
                 <div className="grid grid-cols-3 gap-5">
                     {data.data.map((post) => (

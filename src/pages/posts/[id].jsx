@@ -6,6 +6,7 @@ import axios from "../../axios";
 import LoadingSppiner from "../../components/UI/LoadingSppiner";
 import PostDetailsContent from "../../components/posts/PostDetailsContent";
 import CommentsList from "../../components/posts/CommentsList";
+import UserInfo from "../../components/users/UserInfo";
 
 const Home = () => {
     const router = useRouter();
@@ -39,6 +40,7 @@ const Home = () => {
             <div className="pb-20">
                 <div className="container">
                     <PostDetailsContent data={data} />
+                    <UserInfo />
                     <CommentsList pageId={id} />
                 </div>
             </div>

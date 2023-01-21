@@ -36,9 +36,9 @@ const CommentsList = () => {
             </h2>
             {data.data.map(({ id, name, email, body }) => (
                 <div className="border p-5" key={id}>
-                    <h4 className="text-lg font-semibold">Name: {name}</h4>
-                    <h4 className="text-lg font-semibold">Email: {email}</h4>
-                    <h4 className="text-lg font-semibold">Details: {body}</h4>
+                    <h4 className="text-lg font-medium">Name: {name}</h4>
+                    <h4 className="text-lg font-medium">Email: {email}</h4>
+                    <h4 className="text-lg font-medium">Details: {body}</h4>
                 </div>
             ))}
         </div>

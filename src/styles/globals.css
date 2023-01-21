@@ -33,16 +33,12 @@
     }
 
     h4 {
-        @apply text-xl;
-    }
-
-    h5 {
         @apply text-lg;
     }
 
-    /* li {
-        @apply last: mr-0;
-    } */
+    h5 {
+        @apply text-sm;
+    }
 
     a {
         @apply transition;

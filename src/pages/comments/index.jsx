@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
             <Head>
-                <title>Comments page</title>
+                <title>All Comments</title>
             </Head>
             <div className="container">
                 <div className="grid grid-cols-4 gap-5">

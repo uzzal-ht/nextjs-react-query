@@ -12,7 +12,7 @@ const Header = () => {
                         <Link href="/comments">Comments</Link>
                     </li>
                     <li className="mr-10 text-lg font-medium hover:text-primary">
-                        <Link href="/blog">Blog</Link>
+                        <Link href="/posts">Posts</Link>
                     </li>
                 </ul>
             </div>

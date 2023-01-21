@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 
-const UserInfo = () => {
+const UserInfo = ({ singlePostData }) => {
     const router = useRouter();
     const pageID = router.query.id;
 
@@ -11,13 +11,19 @@ const UserInfo = () => {
         return res;
     };
 
-    const { data, isLoading } = useQuery(["user", pageID], fetchUser);
+    const { data, isLoading } = useQuery({
+        queryKey: ["user", pageID],
+        queryFn: fetchUser,
+        staleTime: 1000 * 60 * 5,
+    });
 
     if (isLoading) {
         return <p>Loading....</p>;
     }
 
-    const userObj = data?.data?.find((user) => user.id === +pageID);
+    const userObj = data?.data?.find(
+        (user) => user.id === +singlePostData.data.userId
+    );
 
     return (
         <div className="pt-10">

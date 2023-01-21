@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import axios from "../../axios";
+import CommentCard from "../Comments/CommentCard";
 import LoadingSppiner from "../UI/LoadingSppiner";
 
 const CommentsList = () => {
@@ -34,12 +35,13 @@ const CommentsList = () => {
             <h2 className="text-2xl font-semibold mb-5 text-center">
                 All comments by post
             </h2>
-            {data.data.map(({ id, name, email, body }) => (
-                <div className="border p-5" key={id}>
-                    <h4 className="text-lg font-medium">Name: {name}</h4>
-                    <h4 className="text-lg font-medium">Email: {email}</h4>
-                    <h4 className="text-lg font-medium">Details: {body}</h4>
-                </div>
+            {data.data.map((item) => (
+                <CommentCard
+                    key={item.id}
+                    name={item.name}
+                    email={item.email}
+                    body={item.body}
+                />
             ))}
         </div>
     );

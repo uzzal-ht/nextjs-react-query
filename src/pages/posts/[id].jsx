@@ -35,12 +35,12 @@ const Home = () => {
     return (
         <>
             <Head>
-                <title>Post Details</title>
+                <title>{data.data.title}</title>
             </Head>
             <div className="pb-20">
                 <div className="container">
                     <PostDetailsContent data={data} />
-                    <UserInfo />
+                    <UserInfo singlePostData={data} />
                     <CommentsList pageId={id} />
                 </div>
             </div>
